@@ -1,0 +1,359 @@
+body {
+
+	background-color: #000;
+}
+
+#contenedorDeInputs	{
+
+	background-color:	#402323 !important; 
+
+	color: #285534 !important;
+
+	border: 2px solid #285534 !important;
+
+	border-radius: 10px !important;
+
+}
+
+select	{
+
+	background-color: #661400 !important;
+
+	color:	#00802b !important;
+
+	border: 1px solid #285534 !important;
+
+	/*font-weight: bold !important;*/
+
+}
+
+button {
+
+	background-color: #402323;
+
+	color:	#285534 !important;
+
+	border: 1px solid #285534 !important;
+}
+
+button:hover {
+
+	background-color: #402323;
+
+	color:	#285534;
+
+	font-weight: bold;
+
+	border: 3px solid #285534 !important;
+
+}
+
+table	{
+
+	border: 2px solid #285534 !important;
+
+}
+
+tbody tr td, thead th	{
+
+	background-color:	#402323 !important;
+
+	color: #285534 !important;
+
+}
+
+path {
+
+	fill: #808080;
+
+	stroke: #fff;
+
+	stroke-width: 2px;
+}
+
+#drop-area {
+
+	border: 2px dashed #00802b;/*#285534;*/
+
+    border-radius: 20px;
+
+    width: 300px;
+
+    height: 200px;
+
+    font-family: sans-serif;
+
+    margin: 50px auto;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+/*PATH DE MAPA*/
+.turquesa0 {
+
+	fill: #020e10 !important;
+}
+
+.turquesa1 {
+
+	fill: #052b31 !important;
+}
+
+.turquesa2 {
+
+	fill: #084852 !important;
+}
+
+.turquesa3 {
+
+	fill: #0b6473 !important;
+}
+
+.turquesa4 {
+
+	fill: #0e8194 !important;
+}
+
+.turquesa5 {
+
+	fill: #119eb4 !important;
+}
+
+.turquesa6 {
+
+	fill: #1cb6cf !important;
+}
+
+.turquesa7 {
+
+	fill: #64cedf !important;
+}
+
+.turquesa8 {
+
+	fill: #87dbe6 !important;
+}
+
+.turquesa9 {
+
+	fill: #abe7ee !important;
+}
+
+.turquesa10 {
+
+	fill: #cff3f6 !important;
+}
+
+.turquesa11 {
+
+	fill: #f3fffe !important;
+}
+
+.naranja0 {
+
+	fill: #3d2700 !important;
+
+}
+
+.naranja1 {
+
+	fill: #593a00 !important;
+
+}
+
+.naranja2 {
+
+	fill: #754c00 !important;
+
+}
+
+.naranja3 {
+
+	fill: #915f00 !important;
+
+}
+
+.naranja4 {
+
+	fill: #ad7100 !important;
+
+}
+
+.naranja5 {
+
+	fill: #c98400 !important;
+
+}
+
+.naranja6 {
+
+	fill: #db9615 !important;
+
+}
+
+.naranja7 {
+
+	fill: #e2a940 !important;
+
+}
+
+.naranja8 {
+
+	fill: #e9bb6a !important;
+
+}
+
+.naranja9 {
+
+	fill: #f0ce94 !important;
+
+}
+
+.naranja10 {
+
+	fill: #f8e0bf !important;
+
+}
+
+.naranja11 {
+
+	fill: #fff3e9 !important;
+
+}
+
+
+
+/*CELDAS DE TABLA*/
+.turquesa0 td {
+
+	background-color: #020e10 !important;
+}
+
+.turquesa1 td {
+
+	background-color: #052b31 !important;
+}
+
+.turquesa2 td {
+
+	background-color: #084852 !important;
+}
+
+.turquesa3 td {
+
+	background-color: #0b6473 !important;
+}
+
+.turquesa4 td {
+
+	background-color: #0e8194 !important;
+}
+
+.turquesa5 td {
+
+	background-color: #119eb4 !important;
+}
+
+.turquesa6 td {
+
+	background-color: #1cb6cf !important;
+}
+
+.turquesa7 td {
+
+	background-color: #64cedf !important;
+}
+
+.turquesa8 td {
+
+	background-color: #87dbe6 !important;
+}
+
+.turquesa9 td {
+
+	background-color: #abe7ee !important;
+}
+
+.turquesa10 td {
+
+	background-color: #cff3f6 !important;
+}
+
+.turquesa11 td {
+
+	background-color: #f3fffe !important;
+}
+
+.naranja0 td {
+
+	background-color: #3d2700 !important;
+
+}
+
+.naranja1 td {
+
+	background-color: #593a00 !important;
+
+}
+
+.naranja2 td {
+
+	background-color: #754c00 !important;
+
+}
+
+.naranja3 td {
+
+	background-color: #915f00 !important;
+
+}
+
+.naranja4 td {
+
+	background-color: #ad7100 !important;
+
+}
+
+.naranja5 td {
+
+	background-color: #c98400 !important;
+
+}
+
+.naranja6 td {
+
+	background-color: #db9615 !important;
+
+}
+
+.naranja7 td {
+
+	background-color: #e2a940 !important;
+
+}
+
+.naranja8 td {
+
+	background-color: #e9bb6a !important;
+
+}
+
+.naranja9 td {
+
+	background-color: #f0ce94 !important;
+
+}
+
+.naranja10 td {
+
+	background-color: #f8e0bf !important;
+
+}
+
+.naranja11 td {
+
+	background-color: #fff3e9 !important;
+
+}
