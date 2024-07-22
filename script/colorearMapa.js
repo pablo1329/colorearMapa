@@ -186,6 +186,12 @@ function pintarMapa(provincia, tonosDeColor){
 
         break;
 
+        case 'CAPITAL FEDERAL':
+
+            document.getElementById('CapitalFederal').style.fill = tonosDeColor;
+
+        break;
+
         case 'CATAMARCA':
 
             document.getElementById('Catamarca').style.fill = tonosDeColor;
@@ -270,6 +276,12 @@ function pintarMapa(provincia, tonosDeColor){
 
         break;
 
+        case 'SANTIAGO DEL ESTERO':
+
+            document.getElementById('SantiagoDelEstero').style.fill = tonosDeColor;
+
+        break;
+
         case 'S.DEL ESTERO':
 
             document.getElementById('SantiagoDelEstero').style.fill = tonosDeColor;
@@ -306,6 +318,12 @@ function pintarMapa(provincia, tonosDeColor){
 
         break;
 
+        case 'TIERRA DEL FUEGO':
+
+            document.getElementById('TierraDelFuego').style.fill = tonosDeColor;
+
+        break;
+        
         case 'T. DEL FUEGO':
 
             document.getElementById('TierraDelFuego').style.fill = tonosDeColor;
@@ -459,6 +477,93 @@ function imprimirEscalaDeColores(cuerpoDeTablaDeEscalaDeColores, colorElegido, t
 }//fin function imprimirEscalaDeColores
 
 
+function imprimirColoresPorProvincias(intervalos, datosNumericos, colorElegido, provincias, cantidadDeDecimales, tonosDeColores)    {
+
+    //Almacenamos la cantidad de provincias (23 provincias + Capital Federal).
+    let cantidadDeProvincias = 24;
+
+    //Almacenamos la cantidad de intervalos.
+    let cantidadDeIntervalos = 12;
+
+    //Utilizamos un bucle para recorrer las 23 provincias + capital federal.
+    for (let i = 0; i < cantidadDeProvincias; i++) {
+            
+        //Recorremos la cantidad de intervalos.
+        for (let j = 0; j < cantidadDeIntervalos; j++) {
+
+            if(j < 11) {
+
+                if(datosNumericos[i] >= intervalos[0][j] && datosNumericos[i] < intervalos[1][j])   {
+
+                    let filaTablaProvincias =  document.createElement('tr');
+
+                    let celdaProvincia = document.createElement('td');
+
+                    let celdaValor = document.createElement('td');
+
+                    let celdaColor = document.createElement('td');
+
+                    filaTablaProvincias.setAttribute('class', colorElegido + j);
+
+                    celdaProvincia.textContent = provincias[i];
+
+                    celdaValor.textContent = datosNumericos[i].toFixed(cantidadDeDecimales);
+
+                    celdaColor.textContent = tonosDeColores[j];
+
+                    filaTablaProvincias.append(celdaProvincia);
+
+                    filaTablaProvincias.append(celdaValor);
+
+                    filaTablaProvincias.append(celdaColor);
+
+                    cuerpoDeTablaDeColoresPorProvincia.append(filaTablaProvincias);
+
+                    pintarMapa(provincias[i], tonosDeColores[j]);
+                    
+                }// fin if(datosNumericos[i] >= intervalos[0][j] && datosNumericos[i] < intervalos[1][j])
+
+            } else if (j === 11)   { //fin if(j < 11) {
+
+                if(datosNumericos[i] >= intervalos[0][j])   {
+
+                    let filaTablaProvincias =  document.createElement('tr');
+
+                    let celdaProvincia = document.createElement('td');
+
+                    let celdaValor = document.createElement('td');
+
+                    let celdaColor = document.createElement('td');
+
+                    filaTablaProvincias.setAttribute('class', colorElegido + j);
+
+                    celdaProvincia.textContent = provincias[i];
+
+                    celdaValor.textContent = datosNumericos[i].toFixed(cantidadDeDecimales);
+
+                    celdaColor.textContent = tonosDeColores[j];
+
+                    filaTablaProvincias.append(celdaProvincia);
+
+                    filaTablaProvincias.append(celdaValor);
+
+                    filaTablaProvincias.append(celdaColor);
+
+                    cuerpoDeTablaDeColoresPorProvincia.append(filaTablaProvincias);
+
+                    pintarMapa(provincias[i], tonosDeColores[j]);
+
+                }//fin if(datosNumericos[i] >= intervalos[0][j])
+
+            }//fin  else if ( j === 11)
+
+        }// fin bucle for j
+
+    }// fin bucle for i
+
+}//fin function imprimirColoresPorProvincias
+
+
 function calcularIntervalos(provincias, datosNumericos)   {
 
     //Obtenemos el boton del formulario.
@@ -494,80 +599,10 @@ function calcularIntervalos(provincias, datosNumericos)   {
         //Llamamos a la función para imprimir escala de colores.
         imprimirEscalaDeColores(cuerpoDeTablaDeEscalaDeColores, colorElegido, tonosDeColores, intervalos, cantidadDeDecimales);
 
-        for (let i = 0; i < 24; i++) {
-            
-            for (let j = 0; j < 12; j++) {
+        //Llamamos a la función para imprimir los colores por provincias y colorear el mapa.
+        imprimirColoresPorProvincias(intervalos, datosNumericos, colorElegido, provincias, cantidadDeDecimales, tonosDeColores);
 
-                if(j < 11) {
-
-                    if(datosNumericos[i] >= intervalos[0][j] && datosNumericos[i] < intervalos[1][j]){
-
-                        let filaTablaProvincias =  document.createElement('tr');
-
-                        filaTablaProvincias.setAttribute('class', colorElegido + j);
-
-                        let celdaProvincia = document.createElement('td');
-
-                        let celdaValor = document.createElement('td');
-
-                        let celdaColor = document.createElement('td');
-
-                        celdaProvincia.textContent = provincias[i];
-
-                        celdaValor.textContent = datosNumericos[i].toFixed(cantidadDeDecimales);
-
-                        celdaColor.textContent = tonosDeColores[j];
-
-                        filaTablaProvincias.append(celdaProvincia);
-
-                        filaTablaProvincias.append(celdaValor);
-
-                        filaTablaProvincias.append(celdaColor);
-
-                        cuerpoDeTablaDeColoresPorProvincia.append(filaTablaProvincias);
-
-                        pintarMapa(provincias[i], tonosDeColores[j]);
-
-                    }
-
-                } else if ( j === 11){
-
-                    if(datosNumericos[i] >= intervalos[0][j]){
-
-                        let filaTablaProvincias =  document.createElement('tr');
-
-                        filaTablaProvincias.setAttribute('class', colorElegido + j);
-
-                        let celdaProvincia = document.createElement('td');
-
-                        let celdaValor = document.createElement('td');
-
-                        let celdaColor = document.createElement('td');
-
-                        celdaProvincia.textContent = provincias[i];
-
-                        celdaValor.textContent = datosNumericos[i].toFixed(cantidadDeDecimales);
-
-                        celdaColor.textContent = tonosDeColores[j];
-
-                        filaTablaProvincias.append(celdaProvincia);
-
-                        filaTablaProvincias.append(celdaValor);
-
-                        filaTablaProvincias.append(celdaColor);
-
-                        cuerpoDeTablaDeColoresPorProvincia.append(filaTablaProvincias);
-
-                        pintarMapa(provincias[i], tonosDeColores[j]);
-
-                    }
-
-                }
-
-            }
-
-        }
-
+        //Llamamos a la función para imprimir mapa en formato PNG.
         convertSvgToPng();
 
     });
