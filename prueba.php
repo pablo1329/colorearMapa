@@ -68,14 +68,7 @@
           </thead>
 
           <tbody id="cuerpoDeTablaDeEscalaDeColores" class="text-center">
-            <tr>
-              <td>(-1,34 - 0,71)</td>
-              <td>#020e10</td>
-            </tr>
-            <tr>
-              <td>(0,71 - 2,76)</td>
-              <td>#052b31</td>
-            </tr>
+
           </tbody>
 
         </table>
@@ -102,17 +95,6 @@
       
           <tbody id="cuerpoDeTablaDeColoresPorProvincia">
             
-            <tr>
-              <td>JUJUY</td>
-              <td> -1,34</td>
-              <td>#020e10</td>
-            </tr>
-            <tr>
-              <td>BUENOS AIRES</td>
-              <td>-0,89</td>
-              <td>#020e10</td>
-            </tr>
-
           </tbody>
 
         </table>   
